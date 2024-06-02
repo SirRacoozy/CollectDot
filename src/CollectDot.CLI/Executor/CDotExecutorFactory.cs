@@ -6,6 +6,8 @@ public static class CDotExecutorFactory
 {
     public static ICDotExecutor GetCDotExecutor()
     {
+        return new CDotTestExecutor();
+        
         var platform = Environment.OSVersion.Platform;
 
         return platform switch
